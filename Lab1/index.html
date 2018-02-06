@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Beverage Order</title>
+    <script src="order.js"></script>
+    <script src="moment.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="my-4">
+            <h2 class="pb-2">Beverage Order</h2>
+            <form>
+                <div class="form-row">
+                    <div>Customer Name</div>    
+                    <div class="col-3" id="name">
+                        <input type="text" id="op1" required class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="my-2">
+            <div class="form-check form-check-inline">
+                <div>Beverage</div>
+                <div id="bev">
+                    <form>
+                        <select onchange="showAgeCheck()">
+                            <option value="0">Coffee</option>
+                            <option value="1">Tea</option>
+                            <option value="2">Beer</option>
+                            <option value="3">Wine</option>
+                        </select>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="size" value="0"> Small
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="size" value="1" checked> Medium
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="size" value="2"> Large
+                        </div>
+                        Quantity
+                        <input class="col-2" type="number" id="op2" required>
+                    </form>
+                </div>
+            </div>
+            <div class="my-5"  id="hidden">
+                <form>
+                    <div class="form-row">
+                        <p>Birthdate(MM/DD/YYYY)</p>
+                        <p class="col-3" id="name">
+                            <input type="text" id="op3" required class="form-control">
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="my-4">
+                <div class="col-2">
+                    <input type="button" id="btn" value="Submit Order" class="btn btn-sm btn-info" />
+                    <span id="sum"></span>
+                </div>
+            </div>
+            <div class="center" id="bevselected">
+                <h4 id="Title">
+                    Receipt
+                </h4>
+                <p id="receiptWord"></p>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
